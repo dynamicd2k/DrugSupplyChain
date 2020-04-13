@@ -1,0 +1,948 @@
+{
+	"info": {
+		"_postman_id": "bf3a4296-1fbd-4ce4-9692-c114e082bbc5",
+		"name": "Pharma-Network",
+		"description": "Pharam network collection package",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "x1",
+							"value": "23",
+							"type": "text"
+						},
+						{
+							"key": "x2",
+							"value": "30",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				},
+				"description": "Check one"
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/addToWallet?certificatePath=/Users/rogueguy/Downloads/pharma-network/network/crypto-config/peerOrganizations/manufacturer.pharma-network.com/users/Admin@manufacturer.pharma-network.com/msp/signcerts/Admin@manufacturer.pharma-network.com-cert.pem&privateKeyPath=/Users/rogueguy/Downloads/pharma-network/network/crypto-config/peerOrganizations/manufacturer.pharma-network.com/users/Admin@manufacturer.pharma-network.com/msp/keystore/4cba0cfe38dfe55ccaaa991a3d6175b9cacaba8787bc70c6762bfaa30ed104cb_sk",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "certificatePath",
+							"value": "/Users/rogueguy/Downloads/pharma-network/network/crypto-config/peerOrganizations/manufacturer.pharma-network.com/users/Admin@manufacturer.pharma-network.com/msp/signcerts/Admin@manufacturer.pharma-network.com-cert.pem",
+							"type": "text"
+						},
+						{
+							"key": "privateKeyPath",
+							"value": "/Users/rogueguy/Downloads/pharma-network/network/crypto-config/peerOrganizations/manufacturer.pharma-network.com/users/Admin@manufacturer.pharma-network.com/msp/keystore/073c5bc2ed8cfde08b38fd03c4e12701a2893697893fd35dadb985f7c33692b8_sk",
+							"type": "text"
+						},
+						{
+							"key": "iL",
+							"value": "MANUFACTURER_ADMIN",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "manufacturerMSP",
+							"type": "text"
+						},
+						{
+							"key": "org",
+							"value": "./identity/manufacturer",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/addToWallet",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addToWallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/registerCompany?companyCRN=MAN001&companyName=Sun Pharma&location=Chennai&organisationRole=manufacturer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "companyCRN",
+							"value": "MAN001",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "Sun Pharma",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Chennai",
+							"type": "text"
+						},
+						{
+							"key": "organisationRole",
+							"value": "manufacturer",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/registerCompany",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"registerCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/registerCompany?companyCRN=MAN001&companyName=Sun Pharma&location=Chennai&organisationRole=manufacturer Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "companyCRN",
+							"value": "TRA001",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "Fed Ex",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Delhi",
+							"type": "text"
+						},
+						{
+							"key": "organisationRole",
+							"value": "transporter",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/registerCompany",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"registerCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/registerCompany?companyCRN=MAN001&companyName=Sun Pharma&location=Chennai&organisationRole=manufacturer Copy Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "companyCRN",
+							"value": "TRA002",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "Blue Dart",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Bangalore",
+							"type": "text"
+						},
+						{
+							"key": "organisationRole",
+							"value": "transporter",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/registerCompany",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"registerCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/registerCompany?companyCRN=MAN001&companyName=Sun Pharma&location=Chennai&organisationRole=manufacturer Copy Copy Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "companyCRN",
+							"value": "DIST001",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "VG Pharma",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Vizag",
+							"type": "text"
+						},
+						{
+							"key": "organisationRole",
+							"value": "distributor",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/registerCompany",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"registerCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/registerCompany?companyCRN=MAN001&companyName=Sun Pharma&location=Chennai&organisationRole=manufacturer Copy Copy Copy Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "companyCRN",
+							"value": "RET002",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "Upgrad",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Mumbai",
+							"type": "text"
+						},
+						{
+							"key": "organisationRole",
+							"value": "retailer",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/registerCompany",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"registerCompany"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/addDrug?drugName=Paracetamol&serialNo=001&mfgDate=01/01/2020&expDate=31/12/2021&companyCRN=MAN001&companyName=Sun Pharma",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "serialNo",
+							"value": "001",
+							"type": "text"
+						},
+						{
+							"key": "mfgDate",
+							"value": "01/01/2020",
+							"type": "text"
+						},
+						{
+							"key": "expDate",
+							"value": "31/12/2021",
+							"type": "text"
+						},
+						{
+							"key": "companyCRN",
+							"value": "MAN001",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "Sun Pharma",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/addDrug",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addDrug"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/addDrug?drugName=Paracetamol&serialNo=001&mfgDate=01/01/2020&expDate=31/12/2021&companyCRN=MAN001&companyName=Sun Pharma Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "serialNo",
+							"value": "002",
+							"type": "text"
+						},
+						{
+							"key": "mfgDate",
+							"value": "01/01/2020",
+							"type": "text"
+						},
+						{
+							"key": "expDate",
+							"value": "31/12/2021",
+							"type": "text"
+						},
+						{
+							"key": "companyCRN",
+							"value": "MAN001",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "Sun Pharma",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/addDrug",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addDrug"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/addDrug?drugName=Paracetamol&serialNo=001&mfgDate=01/01/2020&expDate=31/12/2021&companyCRN=MAN001&companyName=Sun Pharma Copy Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "serialNo",
+							"value": "003",
+							"type": "text"
+						},
+						{
+							"key": "mfgDate",
+							"value": "01/01/2020",
+							"type": "text"
+						},
+						{
+							"key": "expDate",
+							"value": "31/12/2021",
+							"type": "text"
+						},
+						{
+							"key": "companyCRN",
+							"value": "MAN001",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "Sun Pharma",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/addDrug",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addDrug"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/addDrug?drugName=Paracetamol&serialNo=001&mfgDate=01/01/2020&expDate=31/12/2021&companyCRN=MAN001&companyName=Sun Pharma Copy Copy Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "serialNo",
+							"value": "004",
+							"type": "text"
+						},
+						{
+							"key": "mfgDate",
+							"value": "01/01/2020",
+							"type": "text"
+						},
+						{
+							"key": "expDate",
+							"value": "31/12/2021",
+							"type": "text"
+						},
+						{
+							"key": "companyCRN",
+							"value": "MAN001",
+							"type": "text"
+						},
+						{
+							"key": "companyName",
+							"value": "Sun Pharma",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/addDrug",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addDrug"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/createPO?buyerCRN=DIST001&buyerName=VG Pharma&sellerCRN=MAN001&sellerName=Sun Pharma&drugName=Paracetamol&serialNo=001&quantity=3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "buyerCRN",
+							"value": "DIST001",
+							"type": "text"
+						},
+						{
+							"key": "sellerCRN",
+							"value": "MAN001",
+							"type": "text"
+						},
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "serialNo",
+							"value": "001",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/createPO",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createPO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/createShipment?buyerCRN=DIST001&buyerName=VG Pharma&drugName=Paracetamol&listOfAssets=001&transporterCRN=TRA001&transporterName=Fed Ex&serialNo=001",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "buyerCRN",
+							"value": "DIST001",
+							"type": "text"
+						},
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "listOfAssets",
+							"value": "001,002,003",
+							"type": "text"
+						},
+						{
+							"key": "transporterCRN",
+							"value": "TRA001",
+							"type": "text"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/createShipment",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createShipment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/updateShipment?buyerCRN=DIST001&buyerName=VG Pharma&drugName=Paracetamol&serialNo=001&transporterCRN=TRA001&transporterName=Fed Ex",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "buyerCRN",
+							"value": "DIST001",
+							"type": "text"
+						},
+						{
+							"key": "buyerName",
+							"value": "VG Pharma",
+							"type": "text"
+						},
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "transporterCRN",
+							"value": "TRA001",
+							"type": "text"
+						},
+						{
+							"key": "transporterName",
+							"value": "Fed Ex",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/updateShipment",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updateShipment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/createPO?buyerCRN=RET002&buyerName=Upgrad&sellerCRN=DIST001&sellerName=VG Pharma&drugName=Paracetamol&serialNo=001&quantity=2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "buyerCRN",
+							"value": "RET002",
+							"type": "text"
+						},
+						{
+							"key": "sellerCRN",
+							"value": "DIST001",
+							"type": "text"
+						},
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "serialNo",
+							"value": "001",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/createPO",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createPO"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/createShipment?buyerCRN=RET002&buyerName=Upgrad&drugName=Paracetamol&listOfAssets=001&transporterCRN=TRA002&transporterName=Blue Dart&serialNo=001",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "buyerCRN",
+							"value": "RET002",
+							"type": "text"
+						},
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "listOfAssets",
+							"value": "001,002,003",
+							"type": "text"
+						},
+						{
+							"key": "transporterCRN",
+							"value": "TRA002",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/createShipment",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"createShipment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/updateShipment?buyerCRN=RET002&buyerName=Upgrad&drugName=Paracetamol&serialNo=001&transporterCRN=TRA002&transporterName=Blue Dart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "buyerCRN",
+							"value": "RET002",
+							"type": "text"
+						},
+						{
+							"key": "buyerName",
+							"value": "Upgrad",
+							"type": "text"
+						},
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "transporterCRN",
+							"value": "TRA002",
+							"type": "text"
+						},
+						{
+							"key": "transporterName",
+							"value": "Blue Dart",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/updateShipment",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"updateShipment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/retailDrug?drugName=Paracetamol&serialNo=001&retailerCRN=RET002&retailerName=Upgrad&customerAadhar=AAD001",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "serialNo",
+							"value": "001",
+							"type": "text"
+						},
+						{
+							"key": "retailerCRN",
+							"value": "RET002",
+							"type": "text"
+						},
+						{
+							"key": "customerAadhar",
+							"value": "AAD001",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/retailDrug",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"retailDrug"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/viewDrugCurrentState?drugName=Paracetamol&serialNo=001",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "serialNo",
+							"value": "001",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/viewDrugCurrentState",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"viewDrugCurrentState"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/viewHistory?drugName=Paracetamol&serialNo=001",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "drugName",
+							"value": "Paracetamol",
+							"type": "text"
+						},
+						{
+							"key": "serialNo",
+							"value": "001",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/viewHistory",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"viewHistory"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "5ad0721a-53dd-42c1-8c80-3c58e7732375",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "c246ad8f-1188-485b-9fef-dcbd75bc7b8a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

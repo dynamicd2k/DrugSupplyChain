@@ -1,0 +1,85 @@
+---
+#
+# The network connection profile provides client applications the information about the target
+# blockchain network that are necessary for the applications to interact with it. These are all
+# knowledge that must be acquired from out-of-band sources. This file provides such a source.
+#
+name: "network_pharma"
+
+x-type: "hlfv1"
+
+description: "Pharma Network"
+
+version: "1.0"
+
+client:
+    organization: manufacturer
+    connection:
+      timeout:
+        peer:
+          endorser: 300
+          eventHub: 300
+          eventReg: 300
+        orderer: 300
+
+channels:
+  pharmachannel:
+    orderers:
+      - orderer.pharma-network.com
+    peers:
+      peer0.manufacturer.pharma-network.com:
+        endorsingPeer: true
+        chaincodeQuery: true
+        ledgerQuery: true
+        eventSource: true
+      peer1.manufacturer.pharma-network.com:
+        endorsingPeer: false
+        chaincodeQuery: false
+        ledgerQuery: true
+        eventSource: false
+
+organizations:
+manufacturer:
+    mspid: manufacturerMSP
+    peers:
+      - peer0.manufacturer.pharma-network.com
+      - peer1.manufacturer.pharma-network.com
+    certificateAuthorities:
+      - ca.manufacturer.pharma-network.com
+
+orderers:
+  orderer.pharma-network.com:
+    url: grpc://localhost:7050
+    grpcOptions:
+      ssl-target-name-override: orderer.pharma-network.com
+    tlsCACerts:
+      path: /Users/rogueguy/Downloads/pharma-network/network/crypto-config/ordererOrganizations/pharma-network.com/orderers/orderer.pharma-network.com/msp/tlscacerts/tlsca.pharma-network.com-cert.pem
+
+peers:
+
+  peer0.manufacturer.pharma-network.com:
+    url: grpc://localhost:7051
+    grpcOptions:
+      ssl-target-name-override: peer0.manufacturer.pharma-network.com
+      request-timeout: 120001
+    tlsCACerts:
+      path: /Users/rogueguy/Downloads/pharma-network/network/crypto-config/peerOrganizations/manufacturer.pharma-network.com/peers/peer0.manufacturer.pharma-network.com/msp/tlscacerts/tlsca.manufacturer.pharma-network.com-cert.pem
+  peer1.manufacturer.pharma-network.com:
+    url: grpc://localhost:8051
+    grpcOptions:
+      ssl-target-name-override: peer1.manufacturer.pharma-network.com
+      request-timeout: 120001
+    tlsCACerts:
+      path: /Users/rogueguy/Downloads/pharma-network/network/crypto-config/peerOrganizations/manufacturer.pharma-network.com/peers/peer1.manufacturer.pharma-network.com/msp/tlscacerts/tlsca.manufacturer.pharma-network.com-cert.pem
+  
+certificateAuthorities:
+  ca.manufacturer.pharma-network.com:
+    url: http://localhost:7054
+    httpOptions:
+      verify: false
+    tlsCACerts:
+      path: /Users/rogueguy/Downloads/pharma-network/network/crypto-config/peerOrganizations/manufacturer.pharma-network.com/ca/ca.manufacturer.pharma-network.com-cert.pem
+    manufacturer:
+      - enrollId: admin
+        enrollSecret: adminpw
+    caName: ca.manufacturer.pharma-network.com
